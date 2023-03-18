@@ -1,0 +1,16 @@
+name: Staging
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/**.md"
+      - "docker-compose.yml"
+
+jobs:
+  build:
+    uses: tabimworld/.github/.github/workflows/build-staging.yaml@main
+    with:
+      username: ${{ github.actor }}
+    secrets:
+      password: ${{ secrets.GITHUB_TOKEN }}
