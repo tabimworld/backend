@@ -1,0 +1,26 @@
+version: "3"
+volumes:
+  db_data:
+    driver: local
+services:
+  db:
+    image: postgres:15.2
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "strapi"
+      POSTGRES_DB: "strapi"
+      POSTGRES_PASSWORD: "strapi"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+  strapi:
+    build: .
+    image: ghcr.io/tabimworld/backend:dev
+    command: npm run develop
+    env_file:
+      - .env
+    ports:
+      - "1337:1337"
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
