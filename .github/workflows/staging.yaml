@@ -9,16 +9,16 @@ on:
 
 jobs:
   build:
-    uses: tabimworld/.github/.github/workflows/build-staging.yaml@main
+    uses: tabimworld/infra/.github/workflows/build-staging.yaml@main
     with:
       username: ${{ github.actor }}
     secrets:
       password: ${{ secrets.GITHUB_TOKEN }}
   deploy:
     needs: build
-    uses: tabimworld/github/.github/workflows/deploy-staging.yaml@main
+    uses: tabimworld/infra/.github/workflows/deploy-staging.yaml@main
     with:
       namespace: tabimworld-staging
       deployment: backend-depl
     secrets:
-      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}      
+      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
