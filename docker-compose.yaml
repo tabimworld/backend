@@ -16,6 +16,7 @@ services:
     build: .
     image: ghcr.io/tabimworld/backend:dev
     command: npm run develop
+    # docker compose run --rm strapi xxx
     env_file:
       - .env
     ports:
