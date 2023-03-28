@@ -1,0 +1,22 @@
+name: Production
+
+on:
+  push:
+    tags: [v*]
+
+jobs:
+  build:
+    uses: powerkernel/actions-workflows/.github/workflows/build-production.yml@main
+    with:
+      username: ${{ github.actor }}
+    secrets:
+      PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs: build
+    uses: tabimworld/.github/.github/workflows/deploy-production.yaml@main
+    with:
+      namespace: tabimworld-prod
+      yaml-path: k8s/prod.depl.yaml
+    secrets:
+      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_PROD }}
