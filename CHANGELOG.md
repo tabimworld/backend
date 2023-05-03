@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/tabimworld/backend/compare/v0.1.2...v0.1.3) (2023-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update strapi monorepo to v4.10.2 ([ce8d6d7](https://github.com/tabimworld/backend/commit/ce8d6d7807ac220ad3aae158cfa11257060cbd55))
+
 ### [0.1.2](https://github.com/tabimworld/backend/compare/v0.1.1...v0.1.2) (2023-03-29)
 
 
