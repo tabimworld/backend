@@ -14,11 +14,3 @@ jobs:
       username: ${{ github.actor }}
     secrets:
       password: ${{ secrets.GITHUB_TOKEN }}
-  deploy:
-    needs: build
-    uses: tabimworld/infra/.github/workflows/deploy-staging.yaml@main
-    with:
-      namespace: tabimworld-staging
-      deployment: backend-depl
-    secrets:
-      KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
