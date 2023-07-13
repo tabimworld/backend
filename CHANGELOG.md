@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/tabimworld/backend/compare/v0.1.4...v0.1.5) (2023-07-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @strapi/plugin-seo to v1.9.2 ([a316f75](https://github.com/tabimworld/backend/commit/a316f759713c1faa460aa38b6da38c00d3ee2fc8))
+* **deps:** update dependency pg to v8.11.0 ([0ab1472](https://github.com/tabimworld/backend/commit/0ab14721e52ff12c018388d385c3ac5867635838))
+* **deps:** update dependency pg to v8.11.1 ([#11](https://github.com/tabimworld/backend/issues/11)) ([8a01e0f](https://github.com/tabimworld/backend/commit/8a01e0f3ef485de937a10d32a001164d0d9c829a))
+* **deps:** update strapi monorepo to v4.11.5 ([f1a4512](https://github.com/tabimworld/backend/commit/f1a45128d79406677c85172befddd2e88f97268c))
+
 ### [0.1.4](https://github.com/tabimworld/backend/compare/v0.1.3...v0.1.4) (2023-05-21)
 
 
